@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ignite Fitness SF</title>
     <link rel="shortcut icon" href="images/zeimusu_Fire_Icon.ico" type="image/x-icon">
-
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +32,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><i>Ignite Fitness SF</i></a>
+            <a id="brand" class="navbar-brand" href="#"><i>Ignite Fitness SF</i></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,10 +40,10 @@
             <ul class="nav navbar-nav">
               <li><a id="home" href="#">Home</a></li>
               <li><a id="services" href="#">Services</a></li>
-              <!--<li id="prices"><a href="#">Prices</a></li>
-              <li id="faq"><a href="#">FAQ</a></li>
-              <li id="bio"><a href="#">Bio</a></li>
-              <li id="contact"><a href="#">Contact</a></li>-->
+              <li><a id="prices" href="#">Prices</a></li>
+              <li><a id="faq" href="#">FAQ</a></li>
+              <li><a id="bio" href="#">Bio</a></li>
+              <li><a id="contact" href="#">Contact</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
 
@@ -53,9 +51,15 @@
       </nav><!-- /.navbar -->
 
 
+
+
       <div id="Content">
       </div><!--end content-->
 
+
+
+      <div class="footer">
+      </div><!--end footer-->
   </div><!-- end container -->  
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -63,12 +67,54 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
+      $(document).ready(function(){
+        $('#Content').load('pages/home.html');
+       });
+
       $(document).ready(function(){
          $("#home").click(function(){
-          $('#Content').load('pages/services.html');
-          //alert("Thanks for visiting!");
+          $('#Content').load('pages/home.html');
          }); 
        });
+
+      $(document).ready(function(){
+         $("#brand").click(function(){
+          $('#Content').load('pages/home.html');
+         }); 
+       });
+
+      $(document).ready(function(){
+         $("#bio").click(function(){
+          $('#Content').load('pages/bio.html');
+         }); 
+       });
+
+      $(document).ready(function(){
+         $("#contact").click(function(){
+          $('#Content').load('pages/contact.html');
+         }); 
+       });
+
+      $(document).ready(function(){
+         $("#faq").click(function(){
+          $('#Content').load('pages/faq.html');
+         }); 
+       });
+
+      $(document).ready(function(){
+         $("#prices").click(function(){
+          $('#Content').load('pages/prices.html');
+         }); 
+       });
+
+      $(document).ready(function(){
+         $("#services").click(function(){
+          $('#Content').load('pages/services.html');
+         }); 
+       });
+
+
     </script>
   </body>
 </html>
